@@ -1,38 +1,33 @@
 void main(){
 
-Person p1 = Person() ;
-Person p2 = Person() ;
-p1.setData('Kelvin',22,true);
-p2.setData('Njogu',23,false);
-
+    //object
+Person p1 = Person('Kelvin', 22, true);
 p1.showData();
-p2.showData();
+
 
 }
-//class
-class Person {
+
+class Person{
     String? name;
     int? age;
-    bool? marriage;
+    bool? married;
 
-    //method
-    void setData(String n, int a, bool m){
-        name = n;
-        age = a;
-        marriage = m;
+    //constractor
+    Person(this.name, this.age, this.married);
 
-
-    }
-
+    //methods
     void showData(){
-        print('Name is $name ');
-        print('Age is $age');
-        if(marriage == true){
-            print('$name is married');
-        }
-        else{
-            print('$name is not married');
-        }
-    }
-}
+        print('the name is $name');
+        print('the age is $age');
 
+        if(married==true){
+            print("$name is married");
+                }
+                else{
+                     print("$name is not married");
+                }
+
+
+    }
+    
+}
